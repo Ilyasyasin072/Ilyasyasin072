@@ -4,8 +4,6 @@
 
 Developer Web full-stack dengan fokus pada ekosistem PHP/Laravel, modern JavaScript, dan infrastruktur container. 
 
-> PS C:\\laragon\\www\\MyPage> `git clone https://github.com/ilyasyasin072/MyPage.git`
-
 ---
 
 ## 💡 Tentang Saya
@@ -102,9 +100,9 @@ Developer Web full-stack dengan fokus pada ekosistem PHP/Laravel, modern JavaScr
 
 ## 📫 Kontak
 
-- LinkedIn: https://www.linkedin.com/in/ilyas-yasin-800b43130/
-- Email: ilyas@example.com
-- Website: https://ilyasyasin.dev
+- LinkedIn: https://id.linkedin.com/in/ilyas-yasin-800b43130
+- Email: ilyasyasin072@gmail.com
+- Website: https://ilyasyasin072.github.io/MyPage/
 
 ---
 
