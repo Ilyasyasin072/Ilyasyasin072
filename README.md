@@ -24,6 +24,7 @@ Saya adalah **Full-Stack Developer & Application Architect** yang berbasis di Ja
 
 - 🔭 **Fokus Saat Ini:** Pengembangan sistem manajemen regulasi (LDMS), integrasi tanda tangan elektronik tersertifikasi (BSrE BSSN), serta optimalisasi ekosistem logistik dan pembayaran real-time.
 - 🏗️ **Keahlian Utama:** Arsitektur Microservices, Hybrid Mobile Apps, Custom Rich-Text Collaboration Engine, & System Security (VAPT).
+- 💸 **Senang Mengerjakan:** alur uang yang *tidak boleh salah* — idempotency, rekonsiliasi, jurnal double-entry, dan penanganan jawaban API yang tidak pasti.
 - 💡 **Prinsip Kerja:** *"Koding yang bersih, terukur, aman, dan selalu siap untuk dikembangkan."*
 
 ---
@@ -33,6 +34,8 @@ Saya adalah **Full-Stack Developer & Application Architect** yang berbasis di Ja
 ### **Backend & Core Languages**
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Livewire](https://img.shields.io/badge/Livewire-4E56A6?style=for-the-badge&logo=livewire&logoColor=white)
+![Lumen](https://img.shields.io/badge/Lumen-E74430?style=for-the-badge&logo=lumen&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
 ![Yii2](https://img.shields.io/badge/Yii2-0073B7?style=for-the-badge&logo=yii&logoColor=white)
@@ -44,19 +47,24 @@ Saya adalah **Full-Stack Developer & Application Architect** yang berbasis di Ja
 ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
 ![Capacitor](https://img.shields.io/badge/Capacitor_JS-119EFF?style=for-the-badge&logo=capacitor&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=leaflet&logoColor=white)
 
-### **Database, Storage & Message Broker**
+### **Database, Storage, Realtime & Message Broker**
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 ![MinIO](https://img.shields.io/badge/MinIO_S3-C72E49?style=for-the-badge&logo=minio&logoColor=white)
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
+![Laravel Reverb](https://img.shields.io/badge/Laravel_Reverb-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase_FCM-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 
 ### **DevOps, Server & Security**
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![GitLab CI](https://img.shields.io/badge/GitLab_CI-FCA121?style=for-the-badge&logo=gitlab&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 ![HAProxy](https://img.shields.io/badge/HAProxy-106DA9?style=for-the-badge&logo=haproxy&logoColor=white)
+![Apache APISIX](https://img.shields.io/badge/Apache_APISIX-E8433E?style=for-the-badge&logo=apache&logoColor=white)
+![ClamAV](https://img.shields.io/badge/ClamAV-3C3C3C?style=for-the-badge&logo=clamav&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 ---
@@ -87,11 +95,11 @@ Saya adalah **Full-Stack Developer & Application Architect** yang berbasis di Ja
       <ul>
         <li>
           <strong>Sahabat Sayur Ecosystem</strong><br/>
-          Platform e-commerce & logistik multi-tenant (<em>User, Merchant, Driver, Admin</em>) dengan pelacakan GPS real-time (Leaflet + OSRM) dan WhatsApp Cloud API.
+          Platform e-commerce, ojek online & logistik multi-tenant (<em>Pembeli, Mitra Toko, Driver, Supplier, Admin</em>) dengan pelacakan GPS real-time (Leaflet + OSRM), dispatch driver otomatis, dan aplikasi Android (Capacitor). <a href="#-sahabat-sayur--bedah-modul">Lihat bedah modul ↓</a>
         </li>
         <li>
           <strong>SNAP BI & Payment Gateway Integration</strong><br/>
-          Implementasi standar <strong>BRI SNAP BI</strong> (Dynamic QRIS, webhook mutasi intrabank/interbank, disbursement OTP) serta integrasi transfer multi-bank via FLIP API.
+          Implementasi standar <strong>BRI SNAP BI</strong> (Dynamic QRIS, webhook mutasi intrabank/interbank, disbursement OTP) serta integrasi transfer multi-bank via FLIP API dengan <em>idempotency key</em> dan rekonsiliasi otomatis.
         </li>
         <li>
           <strong>Enterprise POS & Manufacturing Apps</strong><br/>
@@ -101,6 +109,102 @@ Saya adalah **Full-Stack Developer & Application Architect** yang berbasis di Ja
     </td>
   </tr>
 </table>
+
+---
+
+## 🥬 Sahabat Sayur — Bedah Modul
+
+> Super-app lokal: belanja sayur & kuliner, ojek online, dan logistik toko dalam satu platform.
+> **Laravel 13 · Livewire 3 · PHP 8.4 · MySQL · Redis · RabbitMQ · Laravel Reverb · Capacitor (Android) · Docker**
+
+```mermaid
+flowchart LR
+    subgraph Klien
+        A[🛒 Pembeli<br/>Web / PWA]
+        B[🏪 Mitra Toko]
+        C[🛵 Driver<br/>Android · Capacitor]
+        D[🚚 Supplier]
+    end
+
+    subgraph Inti["Aplikasi Inti — Laravel + Livewire"]
+        E[Katalog & Checkout]
+        F[Dispatch & Tracking]
+        G[Dompet & Akuntansi]
+    end
+
+    subgraph Layanan
+        H[(MySQL)]
+        I[(Redis)]
+        J[[RabbitMQ]]
+        K[Reverb<br/>WebSocket]
+        L[Layanan Transfer<br/>Lumen · Go]
+    end
+
+    M[Bank / QRIS<br/>SNAP BI]
+    N[Flip<br/>Disbursement]
+
+    A & B & C & D --> Inti
+    Inti --> H & I
+    Inti --> J --> L --> N
+    F <--> K
+    E --> M
+```
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🛒 Pembeli</h4>
+      <ul>
+        <li>Katalog multi-toko, keranjang, checkout dengan harga dihitung ulang di server</li>
+        <li>Pembayaran <strong>QRIS dinamis</strong> & saldo dompet, kupon dengan batas per pengguna</li>
+        <li>Lacak pesanan & ojek <strong>real-time</strong> di peta (Reverb + Leaflet/OSRM)</li>
+        <li>Chat dengan toko & driver, tip untuk driver, ulasan, beli lagi</li>
+        <li>Keamanan akun: verifikasi dua langkah, hapus akun dengan masa tenggang</li>
+      </ul>
+      <h4>🏪 Mitra Toko</h4>
+      <ul>
+        <li>Dashboard penjualan, kelola produk & kategori, peringatan <strong>stok menipis</strong></li>
+        <li>Alur packing berbasis Livewire (tanpa reload) & pengingat pesanan terlambat</li>
+        <li>Cetak struk ke <strong>printer thermal Bluetooth</strong> (ESC/POS raster, BLE chunking)</li>
+        <li>Saldo & pencairan dana (harian otomatis / pengajuan) dengan verifikasi OTP</li>
+        <li><strong>Kulaan</strong>: belanja bahan dari supplier dengan tenggat & pembatalan otomatis</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🛵 Driver</h4>
+      <ul>
+        <li><strong>Dispatch otomatis</strong>: tawaran berbatas waktu, pencarian ulang, bundling multi-order</li>
+        <li>Layar rute dengan state machine perjalanan, foto bukti + PIN serah terima</li>
+        <li>Ojek online (GoRide) dari jemput sampai tujuan, denyut lokasi & monitor kehadiran</li>
+        <li>Dompet driver: pembagian otomatis <strong>BHR 5%</strong> & <strong>bantuan Askes 3%</strong>, pencairan ke rekening</li>
+        <li>Pengingat masa berlaku SKCK, verifikasi dokumen</li>
+      </ul>
+      <h4>💰 Keuangan & Akuntansi</h4>
+      <ul>
+        <li>Jurnal <strong>double-entry</strong> otomatis per transaksi (Master Reff) + buku besar</li>
+        <li>Pencairan via <strong>Flip</strong> di microservice terpisah: <em>idempotency key</em> tetap, status "tidak pasti" yang dicek ulang sebelum kirim ulang, callback ber-tanda-tangan</li>
+        <li>Validasi rekening (bank inquiry) dengan rate limit per pengguna & blokir rekening yang ditolak bank</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<details>
+<summary><strong>🔐 Engineering highlights</strong> — hal-hal yang biasanya luput</summary>
+
+<br/>
+
+| Masalah | Pendekatan |
+| :--- | :--- |
+| Transfer ganda saat jawaban bank/Flip hilang di jalan | Baris disimpan **sebelum** memanggil API dengan kunci tetap; jawaban tidak pasti dicek ke penyedia dulu, bukan dikirim ulang |
+| Callback pembayaran datang dua kali | Proteksi duplikat + `lockForUpdate` per transaksi |
+| Unggahan berbahaya | Semua unggahan (termasuk Livewire temporary upload) dipindai **ClamAV** sebelum diproses |
+| Log bocor data pribadi | Penyaring log terpusat: kunci/token di-*redact*, nomor rekening & nama disamarkan |
+| Tugas terjadwal menumpuk & menghabiskan proses | Setiap tugas dibungkus `timeout` yang lebih pendek dari kunci `withoutOverlapping` |
+| Pesanan tergantung bila pembeli lupa konfirmasi | Penyelesaian otomatis berbasis SLA lewat satu pintu settlement yang sama dengan tombol pembeli |
+| Regresi | **300+ tes** fitur PHPUnit (dengan *fakes*, tanpa memanggil layanan pihak ketiga) + tes JS untuk printer thermal |
+
+</details>
 
 ---
 
@@ -132,6 +236,6 @@ Saya adalah **Full-Stack Developer & Application Architect** yang berbasis di Ja
 
 ### 🤝 Mari Berkolaborasi
 
-Tertarik berdiskusi seputar arsitektur sistem, pengembangan aplikasi, atau konsultasi teknis? Jangan ragu untuk menghubungi saya melalui tautan di atas!
+Tertarik berdiskusi seputar arsitektur sistem, integrasi pembayaran, pengembangan aplikasi, atau konsultasi teknis? Jangan ragu untuk menghubungi saya melalui tautan di atas!
 
 </div>
