@@ -117,6 +117,17 @@ Saya adalah **Full-Stack Developer & Application Architect** yang berbasis di Ja
 
 ---
 
+## 📊 Statistik GitHub
+
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=ilyasyasin072&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ilyasyasin072&layout=compact&langs_count=8&theme=tokyonight&hide_border=true" />
+  <br/>
+  <img src="https://streak-stats.demolab.com?user=ilyasyasin072&theme=tokyonight&hide_border=true" />
+</div>
+
+---
+
 <div align="center">
 
 ### 🤝 Mari Berkolaborasi
