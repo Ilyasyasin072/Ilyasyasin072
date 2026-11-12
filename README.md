@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👋 Halo, Saya Ilyas Yasin
+# 👋 Halo, Saya Ilyas Yasin, S.Tr.Kom
 
 **Full-Stack Software Developer • Application Architect • IT Technical Consultant**
 
