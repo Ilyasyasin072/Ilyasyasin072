@@ -64,7 +64,6 @@ Saya adalah **Full-Stack Developer & Application Architect** yang berbasis di Ja
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 ![HAProxy](https://img.shields.io/badge/HAProxy-106DA9?style=for-the-badge&logo=haproxy&logoColor=white)
 ![Apache APISIX](https://img.shields.io/badge/Apache_APISIX-E8433E?style=for-the-badge&logo=apache&logoColor=white)
-![ClamAV](https://img.shields.io/badge/ClamAV-3C3C3C?style=for-the-badge&logo=clamav&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 ---
@@ -95,11 +94,11 @@ Saya adalah **Full-Stack Developer & Application Architect** yang berbasis di Ja
       <ul>
         <li>
           <strong>Sahabat Sayur Ecosystem</strong><br/>
-          Platform e-commerce, ojek online & logistik multi-tenant (<em>Pembeli, Mitra Toko, Driver, Supplier, Admin</em>) dengan pelacakan GPS real-time (Leaflet + OSRM), dispatch driver otomatis, dan aplikasi Android (Capacitor). <a href="#-sahabat-sayur--bedah-modul">Lihat bedah modul ↓</a>
+          Platform e-commerce, ojek online & logistik multi-tenant dengan pelacakan real-time dan aplikasi Android (Capacitor). <a href="#-sahabat-sayur--yang-sudah-saya-kerjakan">Lihat yang sudah dikerjakan ↓</a>
         </li>
         <li>
           <strong>SNAP BI & Payment Gateway Integration</strong><br/>
-          Implementasi standar <strong>BRI SNAP BI</strong> (Dynamic QRIS, webhook mutasi intrabank/interbank, disbursement OTP) serta integrasi transfer multi-bank via FLIP API dengan <em>idempotency key</em> dan rekonsiliasi otomatis.
+          Implementasi standar <strong>BRI SNAP BI</strong> (Dynamic QRIS, webhook mutasi intrabank/interbank, disbursement OTP) serta integrasi transfer multi-bank via FLIP API.
         </li>
         <li>
           <strong>Enterprise POS & Manufacturing Apps</strong><br/>
@@ -112,99 +111,44 @@ Saya adalah **Full-Stack Developer & Application Architect** yang berbasis di Ja
 
 ---
 
-## 🥬 Sahabat Sayur — Bedah Modul
-
-> Super-app lokal: belanja sayur & kuliner, ojek online, dan logistik toko dalam satu platform.
-> **Laravel 13 · Livewire 3 · PHP 8.4 · MySQL · Redis · RabbitMQ · Laravel Reverb · Capacitor (Android) · Docker**
-
-```mermaid
-flowchart LR
-    subgraph Klien
-        A[🛒 Pembeli<br/>Web / PWA]
-        B[🏪 Mitra Toko]
-        C[🛵 Driver<br/>Android · Capacitor]
-        D[🚚 Supplier]
-    end
-
-    subgraph Inti["Aplikasi Inti — Laravel + Livewire"]
-        E[Katalog & Checkout]
-        F[Dispatch & Tracking]
-        G[Dompet & Akuntansi]
-    end
-
-    subgraph Layanan
-        H[(MySQL)]
-        I[(Redis)]
-        J[[RabbitMQ]]
-        K[Reverb<br/>WebSocket]
-        L[Layanan Transfer<br/>Lumen · Go]
-    end
-
-    M[Bank / QRIS<br/>SNAP BI]
-    N[Flip<br/>Disbursement]
-
-    A & B & C & D --> Inti
-    Inti --> H & I
-    Inti --> J --> L --> N
-    F <--> K
-    E --> M
-```
+## 🥬 Sahabat Sayur — Yang Sudah Saya Kerjakan
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <h4>🛒 Pembeli</h4>
+    <td width="33%" valign="top">
+      <h4>🛒 Aplikasi Kuliner</h4>
+      <p>Platform belanja sayur, kuliner & ojek online untuk pembeli, mitra toko, dan driver.</p>
       <ul>
-        <li>Katalog multi-toko, keranjang, checkout dengan harga dihitung ulang di server</li>
-        <li>Pembayaran <strong>QRIS dinamis</strong> & saldo dompet, kupon dengan batas per pengguna</li>
-        <li>Lacak pesanan & ojek <strong>real-time</strong> di peta (Reverb + Leaflet/OSRM)</li>
-        <li>Chat dengan toko & driver, tip untuk driver, ulasan, beli lagi</li>
-        <li>Keamanan akun: verifikasi dua langkah, hapus akun dengan masa tenggang</li>
-      </ul>
-      <h4>🏪 Mitra Toko</h4>
-      <ul>
-        <li>Dashboard penjualan, kelola produk & kategori, peringatan <strong>stok menipis</strong></li>
-        <li>Alur packing berbasis Livewire (tanpa reload) & pengingat pesanan terlambat</li>
-        <li>Cetak struk ke <strong>printer thermal Bluetooth</strong> (ESC/POS raster, BLE chunking)</li>
-        <li>Saldo & pencairan dana (harian otomatis / pengajuan) dengan verifikasi OTP</li>
-        <li><strong>Kulaan</strong>: belanja bahan dari supplier dengan tenggat & pembatalan otomatis</li>
+        <li>Laravel + Livewire 3, Tailwind CSS</li>
+        <li>Aplikasi Android dengan Capacitor JS</li>
+        <li>Pelacakan perjalanan di peta secara real-time</li>
+        <li>Pembayaran QRIS & dompet digital</li>
+        <li>Cetak struk ke printer thermal Bluetooth</li>
+        <li>Pengujian otomatis dengan PHPUnit</li>
       </ul>
     </td>
-    <td width="50%" valign="top">
-      <h4>🛵 Driver</h4>
+    <td width="33%" valign="top">
+      <h4>💸 Microservice Pencairan Dana</h4>
+      <p>Layanan terpisah untuk transfer dana ke rekening bank melalui Flip API.</p>
       <ul>
-        <li><strong>Dispatch otomatis</strong>: tawaran berbatas waktu, pencarian ulang, bundling multi-order</li>
-        <li>Layar rute dengan state machine perjalanan, foto bukti + PIN serah terima</li>
-        <li>Ojek online (GoRide) dari jemput sampai tujuan, denyut lokasi & monitor kehadiran</li>
-        <li>Dompet driver: pembagian otomatis <strong>BHR 5%</strong> & <strong>bantuan Askes 3%</strong>, pencairan ke rekening</li>
-        <li>Pengingat masa berlaku SKCK, verifikasi dokumen</li>
+        <li>Lumen (PHP) & Go</li>
+        <li>Pencairan dana terjadwal & sesuai pengajuan</li>
+        <li>Validasi rekening & penanganan callback</li>
+        <li>Pencegahan transfer ganda</li>
       </ul>
-      <h4>💰 Keuangan & Akuntansi</h4>
+    </td>
+    <td width="33%" valign="top">
+      <h4>⚙️ Infrastruktur & Realtime</h4>
+      <p>Fondasi agar aplikasi berjalan stabil di produksi.</p>
       <ul>
-        <li>Jurnal <strong>double-entry</strong> otomatis per transaksi (Master Reff) + buku besar</li>
-        <li>Pencairan via <strong>Flip</strong> di microservice terpisah: <em>idempotency key</em> tetap, status "tidak pasti" yang dicek ulang sebelum kirim ulang, callback ber-tanda-tangan</li>
-        <li>Validasi rekening (bank inquiry) dengan rate limit per pengguna & blokir rekening yang ditolak bank</li>
+        <li>Docker & Docker Compose untuk deployment</li>
+        <li>RabbitMQ untuk antrean pekerjaan</li>
+        <li>Laravel Scheduler untuk tugas terjadwal</li>
+        <li>Laravel Reverb (WebSocket) untuk notifikasi & status real-time</li>
       </ul>
     </td>
   </tr>
 </table>
-
-<details>
-<summary><strong>🔐 Engineering highlights</strong> — hal-hal yang biasanya luput</summary>
-
-<br/>
-
-| Masalah | Pendekatan |
-| :--- | :--- |
-| Transfer ganda saat jawaban bank/Flip hilang di jalan | Baris disimpan **sebelum** memanggil API dengan kunci tetap; jawaban tidak pasti dicek ke penyedia dulu, bukan dikirim ulang |
-| Callback pembayaran datang dua kali | Proteksi duplikat + `lockForUpdate` per transaksi |
-| Unggahan berbahaya | Semua unggahan (termasuk Livewire temporary upload) dipindai **ClamAV** sebelum diproses |
-| Log bocor data pribadi | Penyaring log terpusat: kunci/token di-*redact*, nomor rekening & nama disamarkan |
-| Tugas terjadwal menumpuk & menghabiskan proses | Setiap tugas dibungkus `timeout` yang lebih pendek dari kunci `withoutOverlapping` |
-| Pesanan tergantung bila pembeli lupa konfirmasi | Penyelesaian otomatis berbasis SLA lewat satu pintu settlement yang sama dengan tombol pembeli |
-| Regresi | **300+ tes** fitur PHPUnit (dengan *fakes*, tanpa memanggil layanan pihak ketiga) + tes JS untuk printer thermal |
-
-</details>
 
 ---
 
